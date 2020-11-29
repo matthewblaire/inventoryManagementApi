@@ -50,7 +50,7 @@ public class CustomerService {
 	public void deleteCustomer(Long id) throws Exception {
 		
 		try {
-			
+			repo.deleteById(id);
 		} catch(Exception e) {
 			logger.error("Exception occurred while trying to delete customer: "
 					+ id, e);

@@ -40,7 +40,7 @@ public class OrderController {
 			} else if (order.getStatus().equals(OrderStatus.DELIVERED)) {
 				return new ResponseEntity<Object>(service.completeOrder(orderId), HttpStatus.OK);
 			}
-			return new ResponseEntity<Object>("Invalidy update request.", HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<Object>("Invalid update request.", HttpStatus.BAD_REQUEST);
 			
 			
 		} catch (Exception e) {
